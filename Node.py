@@ -7,5 +7,4 @@ class Node():
 
     def setNext(self,next = []):
         self.next = next
-    def setPrevious(self,previous):
-        self.previous = previous
+
