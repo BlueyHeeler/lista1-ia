@@ -1,12 +1,12 @@
 from Node import Node
-nodeS = Node(11,"S")
+nodeS = Node(None,"S")
 nodeA = Node(10.4,"A")
-nodeB = Node(6.7,"B")
+nodeB = Node(12,"B")
 nodeC = Node(4,"C")
-nodeD = Node(8.9,"D")
+nodeD = Node(11,"D")
 nodeE = Node(6.9,"E")
 nodeF = Node(3,"F")
-nodeG = Node(None,"G")
+nodeG = Node(0,"G")
 
 nodeS.setNext([nodeA,nodeD])
 nodeA.setNext([nodeD,nodeB])
@@ -17,7 +17,7 @@ nodeF.setNext([nodeG])
 
 goal = "G"
 
-def HillClimbing(node):
+def MelhorPrimeiro(node):
     lista = []                                                                          #utilizado para percorrer
     lista2 = []                                                                         #visitados                 
 
@@ -55,8 +55,8 @@ def HillClimbing(node):
                         pass
                     else:
                         x.previous = current_node                                       #caso contrário o elemento possui como pai o nó atual
-                        lista.insert(cont,x)
-                cont += 1
+                        lista.append(x)
+            lista = sorted(lista,key=lambda node: node.data)
 
         print("-",end = '')
         for x in lista:
@@ -64,4 +64,4 @@ def HillClimbing(node):
         print("")
     #==============================================       FIM DO WHILE            ========================================================
 
-HillClimbing(nodeS)
+MelhorPrimeiro(nodeS)
