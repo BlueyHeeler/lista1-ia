@@ -22,7 +22,7 @@ def MelhorPrimeiro(node):
     lista2 = []                                                                         #visitados                 
 
     lista.append(node)
-    for x in range(10):
+    while True:
         
         if len(lista) == 0:                                                             #caso a lista fique vazia
             print("não foi encontrado") 
@@ -44,10 +44,9 @@ def MelhorPrimeiro(node):
             
         else:                                                                           #caso haja um próximo nó
             lista.remove(current_node)                                                  #remove da lista o nó atual
-            sorted_nodes = sorted(current_node.next, key=lambda node: node.data)        #ordena a sublista do próximo nó
 
             cont = 0                   
-            for x in sorted_nodes:                                                      #procedimento que adiciona os elementos da sublista ordenada na lista e define o antecessor de um nó
+            for x in current_node.next:                                                 #procedimento que adiciona os elementos da sublista ordenada na lista e define o antecessor de um nó
                 if x in lista:                                                          #se o elemento já estiver na lista não é permitido adicioná-lo novamente
                     pass        
                 else:                                                                   #caso contrário o adicione
@@ -56,7 +55,7 @@ def MelhorPrimeiro(node):
                     else:
                         x.previous = current_node                                       #caso contrário o elemento possui como pai o nó atual
                         lista.append(x)
-            lista = sorted(lista,key=lambda node: node.data)
+            lista = sorted(lista,key=lambda node: node.data)                            #ordena a lista inteira 
 
         print("-",end = '')
         for x in lista:
