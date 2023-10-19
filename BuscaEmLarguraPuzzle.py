@@ -150,4 +150,4 @@ def analizaTabuleiro(tabuleiro):                                                
                 cont+=1
     return cont2
 
-aaa = puzzle(tabuleiro)
+teste = puzzle(tabuleiro)
