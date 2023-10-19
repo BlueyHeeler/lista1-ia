@@ -63,5 +63,5 @@ def HillClimbing(node):
             print(x.nome,end= "-")
         print("")
     #==============================================       FIM DO WHILE            ========================================================
-
+print("oi")
 HillClimbing(nodeS)
