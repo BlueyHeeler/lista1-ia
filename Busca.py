@@ -25,12 +25,6 @@ node21 = Node(None, 21)
 node22 = Node(None, 22)
 node23 = Node(None, 23)
 
-'''
-node0.setNext([node1,node2])
-node1.setNext([node3,node4])
-node4.setNext([node7,node8,node9])
-node2.setNext([node5,node6])
-'''
 
 node0.setNext([node1,node2])
 node1.setNext([node3,node4])
