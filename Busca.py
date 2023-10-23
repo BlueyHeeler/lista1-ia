@@ -148,4 +148,4 @@ def buscaEmProfundidade(node):
 
 buscaEmLargura(node0)
 print("\n==============================")
-#buscaEmProfundidade(node0)
+buscaEmProfundidade(node0)
